@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>EaseMyVoyage Login </title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<!-- login form -->
+<div class='title'>
+<h1>EaseMyVoyage<h1>
+</div>
+  <div id="login">
+    <h3 class="text-center text-white pt-5 main-div">Login form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login_div" class="col-md-12 main-div">
+                    <div id="login-form"  class="form">
+                        <h3 class="text-center text-info">Login</h3>
+                        <div class="form-group">
+                          <label for="email" class="text-info">Email:</label><br>
+                          <input type="email" placeholder="Email..." id="email_field" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="password" class="text-info">Password:</label><br>
+                          <input type="password" placeholder="Password..." id="password_field" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <!-- <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br> -->
+                          <!-- <input type="submit" name="submit" class="btn btn-info btn-md" value="submit"> -->
+                          <button class="btn btn-info btn-md" onclick="login()">Login to Account</button>
+                      </div>
+                      <div class="text-right ">
+                          <a href="signup.html" class="text-info">Register here</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- end of login form -->
+
+<!-- for logged in users -->
+<div id="user_div" class="container mt-5 loggedin-div">
+  <div  class="card text-center ">
+    <div class="card-header">
+      <h1 ><i class="icon fas fa-suitcase-rolling  mr-2"></i></h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Welcome User</h5>
+      <p class="card-text">Welcome to EaseMyVoyage. You're currently logged in.</p>
+      <p id="user_para">Welcome to EaseMyVoyage. You're currently logged in.</p>
+
+      <a href="form.php" class="btn btn-info btn-md">Click to enter trip details</a>
+      <button class="btn btn-info btn-md ml-auto" onclick="logout()">Logout</button>
+    </div>
+    <!-- <div class="card-footer text-muted">
+      2 days ago
+    </div> -->
+  </div>
+</div>
+  
+
+<!-- end of logged in users -->
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    
+  <script src="index.js"></script>
+
+</body>
+</html>
